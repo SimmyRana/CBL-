@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function palindrome(num){
+            const str = String(num);
+            for (let i=0;i<str.length/2;i++){
+                if(str[i] !== str[str.length-1-i]){
+                    return false;
+                }
+            }
+            return true;
+        }
+        const array = [12, 32, 34, 54, 67,55, 66, 78, 65, 44, 33, 23, 89, 76, 43, 23, 12321, 343, 767, 787, 13, 141, 212, 454, 60, 90, 88, 76];
+
+            const palindromes = [];
+            for (let i = 0; i < array.length; i++) {
+             if (palindrome(array[i])) {
+                palindromes.push(array[i]);
+                }
+            }
+
+console.log("Palindrome numbers from the array are:", palindromes);
+    </script>
+</body>
+</html>

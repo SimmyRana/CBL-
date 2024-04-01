@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function anagram(str1, str2) {
+            const s1 = str1;
+            const s2 = str2;
+
+            if (s1.length !== s2.length) {
+                return false;
+            }
+
+            const sortedS1 = s1.split('').sort().join('');
+            const sortedS2 = s2.split('').sort().join('');
+
+                return sortedS1 === sortedS2;
+        }
+
+        const string1 = "listen";
+        const string2 = "silent";
+
+        if (anagram(string1, string2)) {
+            console.log(string1 + " and " + string2 + " are anagrams.");
+        } else {
+            console.log(string1 + " and " + string2 + " are not anagrams.");
+        }
+    </script>
+</body>
+</html>
